@@ -1,0 +1,19 @@
+name: cyrisk-reference
+
+# Reference-only configuration. It has no default service because this release does not start or
+# operate Cyrisk. A deployer must review images, supply its own authentication/network/secret policy,
+# and intentionally select the `reference` profile before any local experimentation.
+services:
+  console-reference:
+    image: ${CYRISK_CONSOLE_IMAGE:-example.invalid/cyrisk-console:0.1.0}
+    profiles: [reference]
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    environment:
+      CYRISK_CONSOLE_ENV: reference-only
+    ports:
+      - 127.0.0.1:${CYRISK_CONSOLE_PORT:-8080}:8080
+    # This is intentionally a source-reference pattern, not a readiness assertion or deployment.

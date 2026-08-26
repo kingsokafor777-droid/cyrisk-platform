@@ -1,0 +1,3 @@
+# Provider-free example. Keep enable_deployment false; this module cannot apply infrastructure.
+environment_label = "reference"
+enable_deployment = false

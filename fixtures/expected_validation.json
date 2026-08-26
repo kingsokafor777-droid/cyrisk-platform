@@ -1,0 +1,24 @@
+{
+  "component_ids": [
+    "cyrisk-audit-export",
+    "cyrisk-ccm",
+    "cyrisk-console",
+    "cyrisk-controls",
+    "cyrisk-core",
+    "cyrisk-evidence",
+    "cyrisk-model",
+    "cyrisk-platform",
+    "cyrisk-register",
+    "cyrisk-scenarios"
+  ],
+  "deployment_executed": false,
+  "limitation": "Validates only this local reference manifest; it does not verify deployed infrastructure, component provenance, security posture, runtime health, or authorization.",
+  "manifest_hash": "9073fb8d9009fc6206171ebd9e1c71a8f599797da71e096684f7f9c61b5aaa25",
+  "reference_ids": [
+    "compose-reference",
+    "release-runbook",
+    "telemetry-reference",
+    "terraform-reference"
+  ],
+  "schema_version": "cyrisk.platform/v1"
+}

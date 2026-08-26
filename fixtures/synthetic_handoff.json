@@ -1,0 +1,24 @@
+{
+  "schema_version": "cyrisk.platform/v1",
+  "environment_mode": "reference-only",
+  "deployment_enabled": false,
+  "components": [
+    {"component_id": "cyrisk-core", "source_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "release_version": "0.1.0", "artifact_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},
+    {"component_id": "cyrisk-model", "source_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "release_version": "0.1.0", "artifact_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+    {"component_id": "cyrisk-evidence", "source_commit": "cccccccccccccccccccccccccccccccccccccccc", "release_version": "0.1.0", "artifact_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"},
+    {"component_id": "cyrisk-controls", "source_commit": "dddddddddddddddddddddddddddddddddddddddd", "release_version": "0.1.0", "artifact_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"},
+    {"component_id": "cyrisk-register", "source_commit": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "release_version": "0.1.0", "artifact_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"},
+    {"component_id": "cyrisk-ccm", "source_commit": "ffffffffffffffffffffffffffffffffffffffff", "release_version": "0.1.0", "artifact_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"},
+    {"component_id": "cyrisk-scenarios", "source_commit": "1111111111111111111111111111111111111111", "release_version": "0.1.0", "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111"},
+    {"component_id": "cyrisk-audit-export", "source_commit": "2222222222222222222222222222222222222222", "release_version": "0.1.0", "artifact_sha256": "2222222222222222222222222222222222222222222222222222222222222222"},
+    {"component_id": "cyrisk-console", "source_commit": "3333333333333333333333333333333333333333", "release_version": "0.1.0", "artifact_sha256": "3333333333333333333333333333333333333333333333333333333333333333"},
+    {"component_id": "cyrisk-platform", "source_commit": "4444444444444444444444444444444444444444", "release_version": "0.1.0", "artifact_sha256": "4444444444444444444444444444444444444444444444444444444444444444"}
+  ],
+  "references": [
+    {"reference_id": "compose-reference", "relative_path": "compose.reference.yml", "kind": "compose", "execution_status": "not_executed"},
+    {"reference_id": "terraform-reference", "relative_path": "terraform", "kind": "terraform", "execution_status": "not_executed"},
+    {"reference_id": "telemetry-reference", "relative_path": "otel/collector.reference.yaml", "kind": "telemetry", "execution_status": "not_executed"},
+    {"reference_id": "release-runbook", "relative_path": "docs/runbooks/release-verification.md", "kind": "runbook", "execution_status": "not_executed"}
+  ],
+  "limitation": "Fictional reference manifest only; it does not verify releases, deploy infrastructure, or establish an operational state."
+}

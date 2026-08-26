@@ -1,0 +1,29 @@
+# Reference-only OpenTelemetry policy example. Do not run this configuration without a deployer-owned
+# collector lifecycle, authenticated receiver policy, retention policy, and explicit data review.
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 127.0.0.1:4317
+
+processors:
+  attributes/minimize:
+    actions:
+      - key: enduser.id
+        action: delete
+      - key: http.request.header.authorization
+        action: delete
+      - key: cyrisk.evidence.payload
+        action: delete
+  batch:
+
+exporters:
+  file/reference:
+    path: /var/lib/cyrisk-reference/otel.ndjson
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [attributes/minimize, batch]
+      exporters: [file/reference]
